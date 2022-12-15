@@ -97,3 +97,32 @@
 // for (let i = data.length - 1; i >= 0; i--){
 //     result[data.length - 1 - i] = data [i];
 // }
+
+// ex6
+// function sayHello(name) {
+//     return 'Привет, ' + name + '!';
+// }
+// console.log(typeof(sayHello('Антон')));
+// Лучшее решение от Автора! =>
+
+// function sayHello(name2) {
+//     return `Привет, ${name2}!`;
+// }
+// console.log(typeof(sayHello('Антон')));
+
+
+// function returnNeighboringNumbers(num) {
+//     return [num - 1, num, num + 1];
+// }
+// console.log(returnNeighboringNumbers(5));
+
+// function getMathResult(number, coef) {
+// let result = number;
+// if (typeof(coef) !== 'string' && coef > 0) {
+//     for (let i = 2; i <= coef; i++){
+//         result += '---' + number * i;
+//     }
+// }
+// return result;
+// }
+// console.log(getMathResult(3,10));
