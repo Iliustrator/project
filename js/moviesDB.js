@@ -16,6 +16,8 @@ let personalMovieDB = {
 
     },
     actors: {
+        a: 1,
+        b: 2
 
     },
     genres: [],
@@ -24,17 +26,24 @@ let personalMovieDB = {
 
 
 
+
 function rememberMyFilms(Question) {
 let rightAnswer = 0;
 
     while (rightAnswer < Question) {
         let lastMovie = prompt ('Один из последних просмотренных фильмов?', '');
+        if (lastMovie != null){
+            lastMovie = lastMovie.trim();
+        }
         while (lastMovie == null || lastMovie.length > 50 || lastMovie == '') {
             alert('Введены некорректные данные');
             lastMovie = prompt ('Один из последних просмотренных фильмов?', '');
+            if (lastMovie != null){
+                lastMovie = lastMovie.trim();
+            }
         }
         let rateMovie = prompt ('На сколько оцените его', '');
-        while (rateMovie == null || rateMovie.length > 50 || rateMovie == '') {
+        while (rateMovie == null || +rateMovie.length > 2 || rateMovie > 10 || rateMovie == ''|| isNaN(rateMovie)) {
             alert('Введены некорректные данные');
             rateMovie = prompt ('На сколько оцените его', '');
         }
