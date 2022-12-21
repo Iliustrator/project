@@ -330,3 +330,69 @@
 
 // console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
 
+// ex 13
+
+// const shoppingMallData = {
+//     shops: [
+//         {
+//             width: 10,
+//             length: 5
+//         },
+//         {
+//             width: 15,
+//             length: 7
+//         },
+//         {
+//             width: 20,
+//             length: 5
+//         },
+//         {
+//             width: 8,
+//             length: 10
+//         }
+//     ],
+//     height: 5,
+//     moneyPer1m3: 30,
+//     budget: 50000
+// };
+
+// function isBudgetEnough(data) {
+//     let square = 0;
+
+//     data.shops.forEach(value => {
+//         square += value.width * value.length;
+//     });
+
+//     return data.budget >= data.moneyPer1m3 * square * data.height ? 'Бюджета достаточно' :'Бюджета недостаточно';
+// }
+
+
+// console.log(isBudgetEnough(shoppingMallData));
+
+// const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+// function sortStudentsByGroups(arr) {
+//     arr.sort();
+//     let arrStudentsByGroups = [];
+//     let quantityGroups = Math.floor(arr.length / 3);
+//     arrStudentsByGroups[quantityGroups] = 'Оставшиеся студенты: ';
+
+//     for (let i = 0; i < quantityGroups; i++){
+//         arrStudentsByGroups[i] = [];
+//         for (let j = 0; j < 3; j++){
+//             arrStudentsByGroups[i][j] = arr[j + i * 3];
+//         }
+//     }
+//     if (arr.length % 3 === 0){
+//         arrStudentsByGroups[quantityGroups] += '-';
+//     } else {
+//         for (let k = 0; k < arr.length % 3; k++){
+//             if (k > 0 && k < arr.length % 3){
+//                 arrStudentsByGroups[quantityGroups] += ', ';
+//             }
+//             arrStudentsByGroups[quantityGroups] += arr[quantityGroups * 3 + k];
+//         }
+//     }
+//     return arrStudentsByGroups;
+// }
+// console.log(sortStudentsByGroups(students));
