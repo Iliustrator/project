@@ -59,12 +59,13 @@ let personalMovieDB = {
         for (let i = 0; i < Question; i++){
            let genresQuestion = prompt(`Ваш любимый жанр под номером ${i + 1}`);
            while (genresQuestion == null || genresQuestion == ''){
+            alert('Введены некорректные данные');
             genresQuestion = prompt(`Ваш любимый жанр под номером ${i + 1}`);
            }
            personalMovieDB.genres[i] = genresQuestion;
         }
         personalMovieDB.genres.forEach((value, index) => {
-            console.log(`Любимый жанр #${index} - это ${value}`);
+            console.log(`Любимый жанр #${index+1} - это ${value}`);
         });
     },
     toggleVisibleMyDB: function (){
