@@ -1,3 +1,4 @@
+"use strict";
 // let specSymbol = '*';
 // let tmp = '';
 
@@ -210,3 +211,122 @@
 //     }
 // }
 // console.log(fib(10));
+
+
+//ex10
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: function (plan){
+//         let result = `Мне ${plan.age} и я владею языками: `;  
+//         let i = 1;
+//         for (let key of plan.skills.languages){
+//             result += key.toUpperCase();
+//             if (i < Object.keys(plan.skills.languages).length){
+//             result += ` `;
+//             i++;
+//         }
+//     }
+//         return result;
+//     }
+// };
+// console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
+
+// function showExperience(plan) {
+//     let {exp} = plan.skills;
+//     return exp;
+// }
+
+// function showProgrammingLangs(plan) {
+//     let result = '';
+//     for (let key in plan.skills.programmingLangs){
+//         result += `Язык ${key} изучен на ${plan.skills.programmingLangs[key]}\n`;
+//     }
+//     return result;
+// }
+// console.log(showProgrammingLangs(personalPlanPeter));
+
+
+// ex 11
+
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     let result = 'Семья состоит из: ';
+//     let i = 1;
+
+//     if (arr.length < 1){
+//         result = 'Семья пуста';
+//     } else {
+//         arr.forEach(element => {
+//             result += element;
+            // if (i < arr.length){
+            //     result += ' ';
+            //     i++;
+            // }
+//         });        
+//     }
+//     return result;
+
+// }
+// console.log(showFamily(family));
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+
+//     arr.forEach(element => {
+//         console.log(element.toLowerCase());
+//     });
+// }
+// standardizeStrings(favoriteCities);
+
+// const someString = 'This is some strange string';
+
+// function reverse(str) {
+//     let result = '';
+//     let j = 0;
+//     if (typeof(str) == 'string'){
+
+//     for (let i = str.length; i >= 0; i--){
+//         result += str.substring(str.length-j, str.length-j-1);
+//         j++;
+//     }
+// } else{
+//     result += 'Ошибка!';
+// }
+// return result;
+// }
+
+// console.log(reverse(someString));
+
+// const baseCurrencies = [];
+// const additionalCurrencies = [];
+
+// function availableCurr(arr, missingCurr) {
+//     let result = 'Доступные валюты:\n';
+
+//     if (arr.length < 1){
+//         result = 'Нет доступных валют';
+//         return result;
+//     }
+    
+//     arr.forEach(element => {
+//     if (element != missingCurr){
+//         result += `${element}\n`;
+//     }
+// });
+// return result;
+// }
+
+// console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
+
