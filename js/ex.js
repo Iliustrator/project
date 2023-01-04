@@ -396,3 +396,21 @@
 //     return arrStudentsByGroups;
 // }
 // console.log(sortStudentsByGroups(students));
+
+
+// ex 16
+
+// function factorial(n) {
+//     let result = 0;
+//     if (typeof(n) == 'number' && Number.isInteger(n)){
+//         if (n <= 1){
+//             return result += 1;
+//         } else {
+//             return n * factorial(n-1);
+//         }
+//     } else {
+//         return 'Ошибка';
+//     }
+
+// }
+// console.log(factorial(4.5));
