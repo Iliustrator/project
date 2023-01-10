@@ -414,3 +414,53 @@
 
 // }
 // console.log(factorial(4.5));
+
+//ex 17
+
+// function amountOfPages(summary){
+//     let n = 0;
+//     let i = 0;
+//     while (i < summary){
+//         n += 1;
+//         i  += n.toString().length;
+//     }
+//     return n;
+// }
+
+// console.log(amountOfPages(7548));
+
+//ex 18
+
+// function isPangram(string) {
+//     const arrPangram = Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+//     const stringSet = new Set (Array.from(string.replace(/\s/g, '').toUpperCase()).sort());
+//     const stringArr = Array.from(stringSet);
+//     if (arrPangram.toString() === stringArr.toString()){
+//         return true;
+//     }
+//     return false;
+
+// }
+// console.log(isPangram('The quick brown fox jumps over the lazy dog'));
+
+
+
+//ex 19
+
+function deepCount(a){
+    let count = 0;
+    a.forEach((e) =>{
+        typeof(e) != 'object' ? count++ : count += 1 + deepCount(e);
+    });
+    return count;
+}
+
+let b = ['a', 'b', ['c', [1], [1, 2]]];
+console.log(deepCount(b));
+
+
+
+
+
+
+
